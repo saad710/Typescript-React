@@ -8,6 +8,7 @@ import Status from './component/Status';
 import TextHead from './component/TextHead';
 import Oscar from './component/Oscar';
 import Button from './component/Button';
+import Input from './component/Input';
 
 
 function App() {
@@ -42,6 +43,7 @@ function App() {
         <TextHead>ThIS Is a Heading Tag</TextHead>
       </Oscar>
       <Button handleClick={(event,id) => console.log('button clicked',event,id)}></Button>
+      <Input value='dd' handleChange={event => console.log(event.target.value)} />
     </div>
   );
 }
