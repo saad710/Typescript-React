@@ -7,6 +7,7 @@ import PersonList from './component/PersonList';
 import Status from './component/Status';
 import TextHead from './component/TextHead';
 import Oscar from './component/Oscar';
+import Button from './component/Button';
 
 
 function App() {
@@ -40,6 +41,7 @@ function App() {
       <Oscar>
         <TextHead>ThIS Is a Heading Tag</TextHead>
       </Oscar>
+      <Button handleClick={(event,id) => console.log('button clicked',event,id)}></Button>
     </div>
   );
 }
