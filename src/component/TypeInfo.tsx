@@ -2,13 +2,26 @@
 import React from 'react';
 
 type InfoProps = {
-    name : string;
+    name: string;
+    notificationCount: number;
+    isLoggedin: boolean;
+
 }
 
-const TypeInfo = (props:InfoProps) => {
+const TypeInfo = (props: InfoProps) => {
     return (
         <div>
-            <h2>welcome {props.name} to visit our site</h2>
+            {
+                props.isLoggedin ?
+                    <>
+                        <h2>welcome {props.name} to visit our site</h2>
+                        <h3>you have 50 notification</h3>
+                    </>
+                    : ""
+            }
+            <div>
+                
+            </div>
         </div>
     );
 };
