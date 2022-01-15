@@ -11,6 +11,13 @@ import Button from './component/Button';
 import Input from './component/Input';
 import Container from './component/Container';
 import { List } from './component/generics/List';
+import { ThemeContextProvider } from './component/context/ThemeContext';
+import { Box } from './component/context/Box';
+import { UserContextProvider } from './component/context/UserContext';
+import { User } from './component/state/User';
+import { DomRef } from './component/refs/DomRef';
+import { MutableRef } from './component/refs/MutableRef';
+
 
 
 function App() {
@@ -47,6 +54,15 @@ function App() {
       <Button handleClick={(event,id) => console.log('button clicked',event,id)}></Button>
       <Input value='dd' handleChange={event => console.log(event.target.value)} />
       <Container styles={{border:"1px solid red",padding:'1rem'}}/>
+      <ThemeContextProvider>
+        <Box />
+      </ThemeContextProvider>
+      <UserContextProvider>
+        <User />
+      </UserContextProvider>
+      <DomRef />
+      <MutableRef />
+      {/* <Counter message='The count value is ' /> */}
       <List
         items={[
           {
