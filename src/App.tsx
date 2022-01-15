@@ -17,6 +17,7 @@ import { UserContextProvider } from './component/context/UserContext';
 import { User } from './component/state/User';
 import { DomRef } from './component/refs/DomRef';
 import { MutableRef } from './component/refs/MutableRef';
+import { Toast } from './component/templateliterals/Toast';
 
 
 
@@ -83,6 +84,7 @@ function App() {
         ]}
         onClick={item => console.log(item)}
       />
+       <Toast position='center' />
     </div>
   );
 }
