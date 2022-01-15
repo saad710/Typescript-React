@@ -10,6 +10,7 @@ import Oscar from './component/Oscar';
 import Button from './component/Button';
 import Input from './component/Input';
 import Container from './component/Container';
+import { List } from './component/generics/List';
 
 
 function App() {
@@ -46,6 +47,26 @@ function App() {
       <Button handleClick={(event,id) => console.log('button clicked',event,id)}></Button>
       <Input value='dd' handleChange={event => console.log(event.target.value)} />
       <Container styles={{border:"1px solid red",padding:'1rem'}}/>
+      <List
+        items={[
+          {
+            id: 1,
+            first: 'Bruce',
+            last: 'Wayne'
+          },
+          {
+            id: 2,
+            first: 'Clark',
+            last: 'Kent'
+          },
+          {
+            id: 3,
+            first: 'Princess',
+            last: 'Diana'
+          }
+        ]}
+        onClick={item => console.log(item)}
+      />
     </div>
   );
 }
