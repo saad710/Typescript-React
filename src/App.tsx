@@ -18,6 +18,7 @@ import { User } from './component/state/User';
 import { DomRef } from './component/refs/DomRef';
 import { MutableRef } from './component/refs/MutableRef';
 import { Toast } from './component/templateliterals/Toast';
+import { CustomButton } from './component/html/Button';
 
 
 
@@ -85,6 +86,9 @@ function App() {
         onClick={item => console.log(item)}
       />
        <Toast position='center' />
+       <CustomButton variant='primary' onClick={() => console.log('Clicked')}>
+        Button Label
+      </CustomButton>
     </div>
   );
 }
