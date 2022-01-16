@@ -19,6 +19,7 @@ import { DomRef } from './component/refs/DomRef';
 import { MutableRef } from './component/refs/MutableRef';
 import { Toast } from './component/templateliterals/Toast';
 import { CustomButton } from './component/html/Button';
+import { Text } from './component/polymorphic/Text';
 
 
 
@@ -53,9 +54,9 @@ function App() {
       <Oscar>
         <TextHead>ThIS Is a Heading Tag</TextHead>
       </Oscar>
-      <Button handleClick={(event,id) => console.log('button clicked',event,id)}></Button>
+      <Button handleClick={(event, id) => console.log('button clicked', event, id)}></Button>
       <Input value='dd' handleChange={event => console.log(event.target.value)} />
-      <Container styles={{border:"1px solid red",padding:'1rem'}}/>
+      <Container styles={{ border: "1px solid red", padding: '1rem' }} />
       <ThemeContextProvider>
         <Box />
       </ThemeContextProvider>
@@ -85,10 +86,19 @@ function App() {
         ]}
         onClick={item => console.log(item)}
       />
-       <Toast position='center' />
-       <CustomButton variant='primary' onClick={() => console.log('Clicked')}>
+      <Toast position='center' />
+      <CustomButton variant='primary' onClick={() => console.log('Clicked')}>
         Button Label
       </CustomButton>
+      <Text size='lg' as='h1'>
+        Heading
+      </Text>
+      <Text size='md' as='p'>
+        Paragraph
+      </Text>
+      <Text size='sm' color='secondary' as='label' htmlFor='someId'>
+        Label
+      </Text>
     </div>
   );
 }
